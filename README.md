@@ -212,7 +212,7 @@ BinanceClient(api_key, api_secret, use_mock=False)
 
 ---
 
-## Important Note
+## ⚠️Important Note
 
 Due to Binance testnet API key generation restrictions (KYC enforcement in some cases), the application runs in **mock mode by default**.
 
