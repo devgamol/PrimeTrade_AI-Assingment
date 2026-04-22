@@ -1,0 +1,8 @@
+2026-04-22 21:34:56,321 - INFO - Input params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.01, 'price': None, 'stop_price': None}
+2026-04-22 21:34:56,322 - INFO - Order result: {'success': True, 'data': {'symbol': 'BTCUSDT', 'status': 'FILLED', 'orderId': 434370, 'executedQty': 0.01}}
+2026-04-22 21:35:09,925 - INFO - Input params: {'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'LIMIT', 'quantity': 0.01, 'price': 60000.0, 'stop_price': None}
+2026-04-22 21:35:09,925 - INFO - Order result: {'success': True, 'data': {'symbol': 'BTCUSDT', 'status': 'FILLED', 'orderId': 671095, 'executedQty': 0.01}}
+2026-04-22 21:35:18,520 - INFO - Input params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP_LIMIT', 'quantity': 0.01, 'price': 60000.0, 'stop_price': 60500.0}
+2026-04-22 21:35:18,528 - INFO - Order result: {'success': True, 'data': {'symbol': 'BTCUSDT', 'status': 'FILLED', 'orderId': 599415, 'executedQty': 0.01}}
+2026-04-22 21:35:24,276 - INFO - Input params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP_LIMIT', 'quantity': 0.01, 'price': None, 'stop_price': None}
+2026-04-22 21:35:24,276 - ERROR - Order error: {'success': False, 'error': 'price is required and must be greater than 0 for LIMIT and STOP_LIMIT orders'}
