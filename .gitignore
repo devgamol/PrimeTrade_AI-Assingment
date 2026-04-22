@@ -17,10 +17,6 @@ ENV/
 .coverage.*
 htmlcov/
 
-# Logs
-logs/
-*.log
-
 # OS/editor files
 .DS_Store
 Thumbs.db

@@ -39,6 +39,7 @@ def execute_order(client, params: dict):
                 order_type=params.get("order_type"),
                 quantity=params.get("quantity"),
                 price=params.get("price"),
+                stop_price=params.get("stop_price"),
             )
             return {
                 "success": True,

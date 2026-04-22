@@ -12,6 +12,7 @@ try:
         validate_price,
         validate_quantity,
         validate_side,
+        validate_stop_price,
         validate_symbol,
     )
 except ModuleNotFoundError:
@@ -23,6 +24,7 @@ except ModuleNotFoundError:
         validate_price,
         validate_quantity,
         validate_side,
+        validate_stop_price,
         validate_symbol,
     )
 
@@ -34,6 +36,7 @@ def main() -> None:
     parser.add_argument("--type", type=str, required=True)
     parser.add_argument("--qty", type=float, required=True)
     parser.add_argument("--price", type=float, required=False)
+    parser.add_argument("--stop-price", type=float, required=False)
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
@@ -43,6 +46,7 @@ def main() -> None:
     order_type = args.type.upper()
     quantity = args.qty
     price = args.price
+    stop_price = args.stop_price
 
     params = {
         "symbol": symbol,
@@ -50,6 +54,7 @@ def main() -> None:
         "order_type": order_type,
         "quantity": quantity,
         "price": price,
+        "stop_price": stop_price,
     }
     logger.info("Input params: %s", params)
 
@@ -59,6 +64,7 @@ def main() -> None:
         validate_order_type(order_type)
         validate_quantity(quantity)
         validate_price(price, order_type)
+        validate_stop_price(stop_price, order_type)
         if args.dry_run:
             result = {
                 "success": True,
@@ -67,6 +73,7 @@ def main() -> None:
                     "status": "DRY_RUN",
                     "orderId": 0,
                     "executedQty": float(quantity),
+                    "stopPrice": stop_price,
                 },
             }
         else:
