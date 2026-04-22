@@ -1,4 +1,4 @@
-# 🚀 Trading Bot CLI (Binance Futures Testnet)
+#  Trading Bot CLI (Binance Futures Testnet)
 
 ## Introduction
 
